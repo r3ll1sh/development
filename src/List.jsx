@@ -14,6 +14,7 @@ class FilteredList extends React.Component {
     constructor(props) {
         super(props)
 
+        //data structure which keeps track of cart and sorts/filters applied
         this.state = {
             cap: "all",
             coast: "all",
@@ -115,7 +116,7 @@ class FilteredList extends React.Component {
             }
         }
 
-        //render a list item
+        //render a list item by passing arguments to ListItem
         const renderItem = (props) => {
             return (<ListItem name={props.name} pop={props.pop}
                 col={props.col} img={props.img} cap={props.cap}
@@ -127,7 +128,7 @@ class FilteredList extends React.Component {
             </ListItem>)
         }
 
-
+        //main HTML for the site
         return (
             <div>
                 <hr />
